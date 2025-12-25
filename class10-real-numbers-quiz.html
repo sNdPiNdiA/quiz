@@ -3,88 +3,64 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Class 10 Maths Quiz – Real Numbers</title>
+<title>Class 10 Maths – Real Numbers Quiz</title>
 
 <style>
-body {
-  font-family: 'Segoe UI', Arial, sans-serif;
-  background: #f2f5f9;
-  margin: 0;
+body{
+  font-family: Arial, sans-serif;
+  background:#f2f5f9;
+  margin:0;
 }
-
-.header {
-  background: #0b5ed7;
-  color: white;
-  padding: 20px;
-  text-align: center;
+.header{
+  background:#0b5ed7;
+  color:#fff;
+  padding:20px;
+  text-align:center;
 }
-
-.timer {
-  font-size: 18px;
-  font-weight: bold;
-  color: #d63384;
-  text-align: center;
-  margin-top: 10px;
+.timer{
+  text-align:center;
+  font-size:18px;
+  color:#d63384;
+  margin-top:10px;
 }
-
-.quiz-container {
-  max-width: 900px;
-  background: #ffffff;
-  margin: 30px auto;
-  padding: 25px;
-  border-radius: 12px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+.quiz-container{
+  max-width:850px;
+  background:#fff;
+  margin:30px auto;
+  padding:25px;
+  border-radius:10px;
+  box-shadow:0 0 15px rgba(0,0,0,0.1);
 }
-
-.question {
-  margin-bottom: 22px;
+.question{display:none;}
+.question.active{display:block;}
+.options label{
+  display:block;
+  padding:8px;
+  border:1px solid #ddd;
+  border-radius:6px;
+  margin-bottom:6px;
+  cursor:pointer;
 }
-
-.question p {
-  font-weight: 600;
+.options label:hover{background:#f0f6ff;}
+.correct{background:#d1e7dd;border-color:#198754;}
+.wrong{background:#f8d7da;border-color:#dc3545;}
+.answer{margin-top:10px;font-weight:bold;}
+button{
+  padding:10px 22px;
+  margin:10px 5px;
+  border:none;
+  border-radius:6px;
+  background:#0b5ed7;
+  color:#fff;
+  cursor:pointer;
 }
-
-.options label {
-  display: block;
-  padding: 8px;
-  border: 1px solid #ddd;
-  border-radius: 6px;
-  margin-bottom: 6px;
-  cursor: pointer;
-}
-
-.options label:hover {
-  background: #f0f6ff;
-  border-color: #0b5ed7;
-}
-
-button {
-  background: #0b5ed7;
-  color: white;
-  border: none;
-  padding: 12px 30px;
-  font-size: 16px;
-  border-radius: 8px;
-  cursor: pointer;
-}
-
-button:hover {
-  background: #084298;
-}
-
-#result {
-  margin-top: 20px;
-  font-size: 20px;
-  font-weight: bold;
-  color: #0b5ed7;
-  text-align: center;
-}
-
-.footer {
-  text-align: center;
-  font-size: 14px;
-  color: #777;
-  margin: 20px;
+button:hover{background:#084298;}
+#result{
+  font-size:20px;
+  font-weight:bold;
+  text-align:center;
+  margin-top:20px;
+  color:#0b5ed7;
 }
 </style>
 </head>
@@ -99,155 +75,177 @@ button:hover {
 <div class="timer" id="timer">⏱ Time Left: 10:00</div>
 
 <div class="quiz-container">
-<form id="quizForm">
 
 <!-- Q1 -->
-<div class="question">
+<div class="question active" data-answer="180">
 <p>1. The HCF of two numbers is 12 and their product is 1800. Find their LCM.</p>
 <div class="options">
-<label><input type="radio" name="q1" value="0">120</label>
-<label><input type="radio" name="q1" value="0">144</label>
-<label><input type="radio" name="q1" value="0">150</label>
-<label><input type="radio" name="q1" value="1">180</label>
+<label onclick="check(this,'180')">120</label>
+<label onclick="check(this,'180')">144</label>
+<label onclick="check(this,'180')">150</label>
+<label onclick="check(this,'180')">180</label>
 </div>
+<div class="answer"></div>
 </div>
 
 <!-- Q2 -->
-<div class="question">
+<div class="question" data-answer="Co-prime">
 <p>2. If the HCF of two numbers is 1, the numbers are called:</p>
 <div class="options">
-<label><input type="radio" name="q2" value="0">Composite numbers</label>
-<label><input type="radio" name="q2" value="0">Prime numbers</label>
-<label><input type="radio" name="q2" value="1">Co-prime numbers</label>
-<label><input type="radio" name="q2" value="0">Even numbers</label>
+<label onclick="check(this,'Co-prime')">Composite numbers</label>
+<label onclick="check(this,'Co-prime')">Prime numbers</label>
+<label onclick="check(this,'Co-prime')">Co-prime numbers</label>
+<label onclick="check(this,'Co-prime')">Even numbers</label>
 </div>
+<div class="answer"></div>
 </div>
 
 <!-- Q3 -->
-<div class="question">
+<div class="question" data-answer="Product">
 <p>3. The LCM of two co-prime numbers is equal to:</p>
 <div class="options">
-<label><input type="radio" name="q3" value="0">HCF</label>
-<label><input type="radio" name="q3" value="0">Sum</label>
-<label><input type="radio" name="q3" value="1">Product</label>
-<label><input type="radio" name="q3" value="0">Difference</label>
+<label onclick="check(this,'Product')">HCF</label>
+<label onclick="check(this,'Product')">Sum</label>
+<label onclick="check(this,'Product')">Product</label>
+<label onclick="check(this,'Product')">Difference</label>
 </div>
+<div class="answer"></div>
 </div>
 
 <!-- Q4 -->
-<div class="question">
+<div class="question" data-answer="9">
 <p>4. The HCF of 306 and 657 is:</p>
 <div class="options">
-<label><input type="radio" name="q4" value="1">9</label>
-<label><input type="radio" name="q4" value="0">18</label>
-<label><input type="radio" name="q4" value="0">27</label>
-<label><input type="radio" name="q4" value="0">51</label>
+<label onclick="check(this,'9')">9</label>
+<label onclick="check(this,'9')">18</label>
+<label onclick="check(this,'9')">27</label>
+<label onclick="check(this,'9')">51</label>
 </div>
+<div class="answer"></div>
 </div>
 
 <!-- Q5 -->
-<div class="question">
-<p>5. If the product of two numbers equals the square of their HCF, the numbers are:</p>
+<div class="question" data-answer="Equal">
+<p>5. If the product of two numbers is equal to the square of their HCF, the numbers are:</p>
 <div class="options">
-<label><input type="radio" name="q5" value="0">Co-prime</label>
-<label><input type="radio" name="q5" value="1">Equal</label>
-<label><input type="radio" name="q5" value="0">Prime</label>
-<label><input type="radio" name="q5" value="0">Even</label>
+<label onclick="check(this,'Equal')">Co-prime</label>
+<label onclick="check(this,'Equal')">Equal</label>
+<label onclick="check(this,'Equal')">Prime</label>
+<label onclick="check(this,'Equal')">Even</label>
 </div>
+<div class="answer"></div>
 </div>
 
 <!-- Q6 -->
-<div class="question">
+<div class="question" data-answer="360">
 <p>6. The smallest number divisible by 8, 12 and 15 is:</p>
 <div class="options">
-<label><input type="radio" name="q6" value="0">120</label>
-<label><input type="radio" name="q6" value="0">240</label>
-<label><input type="radio" name="q6" value="1">360</label>
-<label><input type="radio" name="q6" value="0">480</label>
+<label onclick="check(this,'360')">120</label>
+<label onclick="check(this,'360')">240</label>
+<label onclick="check(this,'360')">360</label>
+<label onclick="check(this,'360')">480</label>
 </div>
+<div class="answer"></div>
 </div>
 
 <!-- Q7 -->
-<div class="question">
+<div class="question" data-answer="240">
 <p>7. The HCF of two numbers is 16 and their LCM is 960. If one number is 48, the other number is:</p>
 <div class="options">
-<label><input type="radio" name="q7" value="0">120</label>
-<label><input type="radio" name="q7" value="0">180</label>
-<label><input type="radio" name="q7" value="1">240</label>
-<label><input type="radio" name="q7" value="0">320</label>
+<label onclick="check(this,'240')">120</label>
+<label onclick="check(this,'240')">180</label>
+<label onclick="check(this,'240')">240</label>
+<label onclick="check(this,'240')">320</label>
 </div>
+<div class="answer"></div>
 </div>
 
 <!-- Q8 -->
-<div class="question">
+<div class="question" data-answer="2">
 <p>8. How many pairs of positive integers have product 3060 and HCF 60?</p>
 <div class="options">
-<label><input type="radio" name="q8" value="0">1</label>
-<label><input type="radio" name="q8" value="1">2</label>
-<label><input type="radio" name="q8" value="0">3</label>
-<label><input type="radio" name="q8" value="0">4</label>
+<label onclick="check(this,'2')">1</label>
+<label onclick="check(this,'2')">2</label>
+<label onclick="check(this,'2')">3</label>
+<label onclick="check(this,'2')">4</label>
 </div>
+<div class="answer"></div>
 </div>
 
 <!-- Q9 -->
-<div class="question">
+<div class="question" data-answer="Both true and R explains A">
 <p>9. Assertion (A): If two numbers are co-prime, their HCF is 1.<br>
 Reason (R): Co-prime numbers have no common prime factor.</p>
 <div class="options">
-<label><input type="radio" name="q9" value="1">Both A and R are true and R is the correct explanation</label>
-<label><input type="radio" name="q9" value="0">Both true but R not explanation</label>
-<label><input type="radio" name="q9" value="0">A true, R false</label>
-<label><input type="radio" name="q9" value="0">A false, R true</label>
+<label onclick="check(this,'Both true and R explains A')">Both A and R are true and R is the correct explanation</label>
+<label onclick="check(this,'Both true and R explains A')">Both true but R is not explanation</label>
+<label onclick="check(this,'Both true and R explains A')">A true, R false</label>
+<label onclick="check(this,'Both true and R explains A')">A false, R true</label>
 </div>
+<div class="answer"></div>
 </div>
 
 <!-- Q10 -->
-<div class="question">
-<p>10. If the HCF of two numbers is 1, then their LCM is:</p>
+<div class="question" data-answer="Product of numbers">
+<p>10. If the HCF of two numbers is 1, then their LCM is equal to:</p>
 <div class="options">
-<label><input type="radio" name="q10" value="0">Sum of numbers</label>
-<label><input type="radio" name="q10" value="0">Difference of numbers</label>
-<label><input type="radio" name="q10" value="1">Product of numbers</label>
-<label><input type="radio" name="q10" value="0">Square of numbers</label>
+<label onclick="check(this,'Product of numbers')">Sum of numbers</label>
+<label onclick="check(this,'Product of numbers')">Difference of numbers</label>
+<label onclick="check(this,'Product of numbers')">Product of numbers</label>
+<label onclick="check(this,'Product of numbers')">Square of numbers</label>
 </div>
+<div class="answer"></div>
 </div>
 
-<button type="button" onclick="submitQuiz()">Submit Quiz</button>
+<!-- Navigation -->
+<div style="text-align:center;">
+<button onclick="prev()">Previous</button>
+<button onclick="next()">Next</button>
+<button onclick="submitQuiz()">Submit</button>
+</div>
+
 <div id="result"></div>
-
-</form>
-</div>
-
-<div class="footer">
-© 2025 YourWebsiteName | CBSE Practice Quiz
 </div>
 
 <script>
-let timeLeft = 600; // 10 minutes
+let current=0, score=0;
+const questions=document.querySelectorAll(".question");
 
-let timer = setInterval(function () {
-  let minutes = Math.floor(timeLeft / 60);
-  let seconds = timeLeft % 60;
-  document.getElementById("timer").innerHTML =
-    "⏱ Time Left: " + minutes + ":" + (seconds < 10 ? "0" : "") + seconds;
+function showQuestion(i){
+  questions.forEach(q=>q.classList.remove("active"));
+  questions[i].classList.add("active");
+}
+function next(){if(current<questions.length-1){current++;showQuestion(current);}}
+function prev(){if(current>0){current--;showQuestion(current);}}
 
-  if (timeLeft <= 0) {
-    clearInterval(timer);
-    submitQuiz();
-    alert("Time Over! Quiz submitted automatically.");
+function check(option,correct){
+  const box=option.parentElement;
+  if(box.classList.contains("answered")) return;
+  box.classList.add("answered");
+  const ans=box.nextElementSibling;
+  if(option.innerText===correct){
+    option.classList.add("correct");
+    ans.innerHTML="✅ Correct Answer";
+    score++;
+  }else{
+    option.classList.add("wrong");
+    ans.innerHTML="❌ Correct Answer: "+correct;
   }
+}
+
+// Timer
+let timeLeft=600;
+let timer=setInterval(()=>{
+  let m=Math.floor(timeLeft/60), s=timeLeft%60;
+  document.getElementById("timer").innerHTML="⏱ Time Left: "+m+":"+(s<10?"0":"")+s;
+  if(timeLeft<=0){clearInterval(timer);submitQuiz();}
   timeLeft--;
-}, 1000);
+},1000);
 
-function submitQuiz() {
+function submitQuiz(){
   clearInterval(timer);
-  let score = 0;
-  for (let i = 1; i <= 10; i++) {
-    let ans = document.querySelector('input[name="q' + i + '"]:checked');
-    if (ans && ans.value === "1") score++;
-  }
-  document.getElementById("result").innerHTML =
-    "✅ Your Score: " + score + " / 10";
+  document.getElementById("result").innerHTML=
+    "✅ Final Score: "+score+" / "+questions.length;
 }
 </script>
 
