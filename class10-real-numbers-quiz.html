@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Class 10 Maths Quiz – Real Numbers</title>
+
+<style>
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #f2f5f9;
+  margin: 0;
+}
+
+.header {
+  background: #0b5ed7;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.timer {
+  font-size: 18px;
+  font-weight: bold;
+  color: #d63384;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.quiz-container {
+  max-width: 900px;
+  background: #ffffff;
+  margin: 30px auto;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.question {
+  margin-bottom: 22px;
+}
+
+.question p {
+  font-weight: 600;
+}
+
+.options label {
+  display: block;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  margin-bottom: 6px;
+  cursor: pointer;
+}
+
+.options label:hover {
+  background: #f0f6ff;
+  border-color: #0b5ed7;
+}
+
+button {
+  background: #0b5ed7;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #084298;
+}
+
+#result {
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #0b5ed7;
+  text-align: center;
+}
+
+.footer {
+  text-align: center;
+  font-size: 14px;
+  color: #777;
+  margin: 20px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="header">
+  <h1>Class 10 Maths</h1>
+  <p>Chapter 1 – Real Numbers (Practice Quiz)</p>
+</div>
+
+<div class="timer" id="timer">⏱ Time Left: 10:00</div>
+
+<div class="quiz-container">
+<form id="quizForm">
+
+<!-- Q1 -->
+<div class="question">
+<p>1. The HCF of two numbers is 12 and their product is 1800. Find their LCM.</p>
+<div class="options">
+<label><input type="radio" name="q1" value="0">120</label>
+<label><input type="radio" name="q1" value="0">144</label>
+<label><input type="radio" name="q1" value="0">150</label>
+<label><input type="radio" name="q1" value="1">180</label>
+</div>
+</div>
+
+<!-- Q2 -->
+<div class="question">
+<p>2. If the HCF of two numbers is 1, the numbers are called:</p>
+<div class="options">
+<label><input type="radio" name="q2" value="0">Composite numbers</label>
+<label><input type="radio" name="q2" value="0">Prime numbers</label>
+<label><input type="radio" name="q2" value="1">Co-prime numbers</label>
+<label><input type="radio" name="q2" value="0">Even numbers</label>
+</div>
+</div>
+
+<!-- Q3 -->
+<div class="question">
+<p>3. The LCM of two co-prime numbers is equal to:</p>
+<div class="options">
+<label><input type="radio" name="q3" value="0">HCF</label>
+<label><input type="radio" name="q3" value="0">Sum</label>
+<label><input type="radio" name="q3" value="1">Product</label>
+<label><input type="radio" name="q3" value="0">Difference</label>
+</div>
+</div>
+
+<!-- Q4 -->
+<div class="question">
+<p>4. The HCF of 306 and 657 is:</p>
+<div class="options">
+<label><input type="radio" name="q4" value="1">9</label>
+<label><input type="radio" name="q4" value="0">18</label>
+<label><input type="radio" name="q4" value="0">27</label>
+<label><input type="radio" name="q4" value="0">51</label>
+</div>
+</div>
+
+<!-- Q5 -->
+<div class="question">
+<p>5. If the product of two numbers equals the square of their HCF, the numbers are:</p>
+<div class="options">
+<label><input type="radio" name="q5" value="0">Co-prime</label>
+<label><input type="radio" name="q5" value="1">Equal</label>
+<label><input type="radio" name="q5" value="0">Prime</label>
+<label><input type="radio" name="q5" value="0">Even</label>
+</div>
+</div>
+
+<!-- Q6 -->
+<div class="question">
+<p>6. The smallest number divisible by 8, 12 and 15 is:</p>
+<div class="options">
+<label><input type="radio" name="q6" value="0">120</label>
+<label><input type="radio" name="q6" value="0">240</label>
+<label><input type="radio" name="q6" value="1">360</label>
+<label><input type="radio" name="q6" value="0">480</label>
+</div>
+</div>
+
+<!-- Q7 -->
+<div class="question">
+<p>7. The HCF of two numbers is 16 and their LCM is 960. If one number is 48, the other number is:</p>
+<div class="options">
+<label><input type="radio" name="q7" value="0">120</label>
+<label><input type="radio" name="q7" value="0">180</label>
+<label><input type="radio" name="q7" value="1">240</label>
+<label><input type="radio" name="q7" value="0">320</label>
+</div>
+</div>
+
+<!-- Q8 -->
+<div class="question">
+<p>8. How many pairs of positive integers have product 3060 and HCF 60?</p>
+<div class="options">
+<label><input type="radio" name="q8" value="0">1</label>
+<label><input type="radio" name="q8" value="1">2</label>
+<label><input type="radio" name="q8" value="0">3</label>
+<label><input type="radio" name="q8" value="0">4</label>
+</div>
+</div>
+
+<!-- Q9 -->
+<div class="question">
+<p>9. Assertion (A): If two numbers are co-prime, their HCF is 1.<br>
+Reason (R): Co-prime numbers have no common prime factor.</p>
+<div class="options">
+<label><input type="radio" name="q9" value="1">Both A and R are true and R is the correct explanation</label>
+<label><input type="radio" name="q9" value="0">Both true but R not explanation</label>
+<label><input type="radio" name="q9" value="0">A true, R false</label>
+<label><input type="radio" name="q9" value="0">A false, R true</label>
+</div>
+</div>
+
+<!-- Q10 -->
+<div class="question">
+<p>10. If the HCF of two numbers is 1, then their LCM is:</p>
+<div class="options">
+<label><input type="radio" name="q10" value="0">Sum of numbers</label>
+<label><input type="radio" name="q10" value="0">Difference of numbers</label>
+<label><input type="radio" name="q10" value="1">Product of numbers</label>
+<label><input type="radio" name="q10" value="0">Square of numbers</label>
+</div>
+</div>
+
+<button type="button" onclick="submitQuiz()">Submit Quiz</button>
+<div id="result"></div>
+
+</form>
+</div>
+
+<div class="footer">
+© 2025 YourWebsiteName | CBSE Practice Quiz
+</div>
+
+<script>
+let timeLeft = 600; // 10 minutes
+
+let timer = setInterval(function () {
+  let minutes = Math.floor(timeLeft / 60);
+  let seconds = timeLeft % 60;
+  document.getElementById("timer").innerHTML =
+    "⏱ Time Left: " + minutes + ":" + (seconds < 10 ? "0" : "") + seconds;
+
+  if (timeLeft <= 0) {
+    clearInterval(timer);
+    submitQuiz();
+    alert("Time Over! Quiz submitted automatically.");
+  }
+  timeLeft--;
+}, 1000);
+
+function submitQuiz() {
+  clearInterval(timer);
+  let score = 0;
+  for (let i = 1; i <= 10; i++) {
+    let ans = document.querySelector('input[name="q' + i + '"]:checked');
+    if (ans && ans.value === "1") score++;
+  }
+  document.getElementById("result").innerHTML =
+    "✅ Your Score: " + score + " / 10";
+}
+</script>
+
+</body>
+</html>
